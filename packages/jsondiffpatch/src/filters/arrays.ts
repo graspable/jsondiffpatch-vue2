@@ -17,6 +17,10 @@ import type {
 } from '../types.js';
 
 const ARRAY_MOVE = 3;
+declare const Vue: {
+  set: (obj: unknown, key: string | number, value: unknown) => void;
+  delete: (obj: unknown, index: number) => void;
+};
 
 function arraysHaveMatchByRef(
   array1: readonly unknown[],
@@ -398,7 +402,7 @@ export const collectChildrenPatchFilter: Filter<PatchContext> =
     for (let index = 0; index < length; index++) {
       child = context.children[index];
       const arrayIndex = child.childName as number;
-      array[arrayIndex] = child.result;
+      Vue.set(array, arrayIndex, child.result);
     }
     context.setResult(array).exit();
   };

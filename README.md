@@ -1,14 +1,13 @@
-# jsondiffpatch
+# jsondiffpatch-vue2
 
-<!--- badges -->
+We make some minimal adjustments so
+[jsondiffpatch](http://benjamine.github.io/jsondiffpatch) can be used with the
+Vue2 reactive data model to update values efficiently. Specifically, we use
+`Vue.set()` and `Vue.delete()` in a few places. Make sure that a global Vue
+variable is available before using jsondiffpatch-vue2.
 
-[![Build Status](https://secure.travis-ci.org/benjamine/jsondiffpatch.svg)](http://travis-ci.org/benjamine/jsondiffpatch)
-[![Code Climate](https://codeclimate.com/github/benjamine/jsondiffpatch/badges/gpa.svg)](https://codeclimate.com/github/benjamine/jsondiffpatch)
-[![Test Coverage](https://codeclimate.com/github/benjamine/jsondiffpatch/badges/coverage.svg)](https://codeclimate.com/github/benjamine/jsondiffpatch)
-[![NPM version](https://badge.fury.io/js/jsondiffpatch.svg)](http://badge.fury.io/js/jsondiffpatch)
-[![NPM dependencies](https://david-dm.org/benjamine/jsondiffpatch.svg)](https://david-dm.org/benjamine/jsondiffpatch)
-
-Diff & patch JavaScript objects
+This is the same idea by [yarsky-tgz](https://github.com/benjamine/jsondiffpatch/compare/master...yarsky-tgz:vue-jsondiffpatch:master),
+just up to date with the latest version of jsondiffpatch.
 
 ---
 

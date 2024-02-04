@@ -1,5 +1,5 @@
 {
-  "name": "jsondiffpatch",
+  "name": "@graspable/jsondiffpatch-vue2",
   "version": "0.6.0",
   "author": "Benjamin Eidelman <beneidel@gmail.com>",
   "description": "Diff & Patch for Javascript objects",
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/benjamine/jsondiffpatch.git"
+    "url": "https://github.com/graspable/jsondiffpatch-vue2.git"
   },
   "keywords": [
     "json",
@@ -63,5 +63,5 @@
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
   },
-  "homepage": "https://github.com/benjamine/jsondiffpatch"
+  "homepage": "https://github.com/graspable/jsondiffpatch-vue2.git"
 }

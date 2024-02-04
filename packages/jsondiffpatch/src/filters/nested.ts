@@ -3,6 +3,11 @@ import PatchContext from '../contexts/patch.js';
 import ReverseContext from '../contexts/reverse.js';
 import type { ArrayDelta, Delta, Filter, ObjectDelta } from '../types.js';
 
+declare const Vue: {
+  set: (obj: unknown, key: string | number, value: unknown) => void;
+  delete: (obj: unknown, index: string | number) => void;
+};
+
 export const collectChildrenDiffFilter: Filter<DiffContext> = (context) => {
   if (!context || !context.children) {
     return;
@@ -110,9 +115,9 @@ export const collectChildrenPatchFilter: Filter<PatchContext> =
         Object.prototype.hasOwnProperty.call(context.left, property) &&
         child.result === undefined
       ) {
-        delete object[property];
+        Vue.delete(object, property);
       } else if (object[property] !== child.result) {
-        object[property] = child.result;
+        Vue.set(object, property, child.result);
       }
     }
     context.setResult(object).exit();

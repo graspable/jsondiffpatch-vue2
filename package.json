@@ -1,5 +1,5 @@
 {
-  "name": "jsondiffpatch",
+  "name": "jsondiffpatch-vue2",
   "scripts": {
     "format": "prettier . --write",
     "format-check": "prettier . --check"

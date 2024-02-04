@@ -6,6 +6,12 @@ module.exports = {
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
+  globals: {
+    Vue: {
+      set: (obj, key, value) => obj[key] = value,
+      delete: (obj, key) => delete obj[key],
+    }
+  },
   transform: {
     '^.+\\.ts$': [
       'ts-jest',
